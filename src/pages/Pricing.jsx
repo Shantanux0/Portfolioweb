@@ -19,7 +19,8 @@ const PRICING_PLANS = [
         originalPrice: "₹6,500",
         unit: "/project",
         description: "A complete dynamic application connecting your UI to a real database.",
-        features: ["Integrated Frontend & Backend Architecture", "Robust Database Schema Design (SQL/NoSQL)", "Secure Identity & Access Management", "Scalable REST/GraphQL API Development", "Expedited 7-Day Launch Cycle"],
+        features: ["React Frontend + Spring Boot Backend", "Robust SQL Database Design (MySQL/PostgreSQL)", "Secure Java Security Integration", "Scalable REST APIs with Spring Boot", "Expedited 7-Day Launch Cycle"],
+
 
     },
     {
@@ -28,7 +29,8 @@ const PRICING_PLANS = [
         originalPrice: "₹12,000",
         unit: "/project",
         description: "Advanced business solution with payments and smart AI features.",
-        features: ["Enterprise-Grade Full Stack Solution", "Seamless Payment Gateway Integration", "Generative AI & LLM Capabilities", "Comprehensive Admin Analytics Dashboard", "Accelerated 14-Day Delivery"],
+        features: ["Enterprise Spring Boot Microservices", "Seamless Payment Gateway Integration", "Generative AI Integration (Java SDKs)", "Comprehensive Admin Analytics Dashboard", "Accelerated 14-Day Delivery"],
+
 
     },
     {

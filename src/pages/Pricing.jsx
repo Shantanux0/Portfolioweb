@@ -11,7 +11,7 @@ const PRICING_PLANS = [
         originalPrice: "₹2,500",
         unit: "/project",
         description: "Perfect for personal portfolios, landing pages, and static websites.",
-        features: ["Responsive React/Next.js UI", "Free Hosting Setup (Vercel)", "Source Code Included", "Basic SEO Optimization", "3 Days Delivery"]
+        features: ["Modern Responsive Interface", "Cloud Deployment Configuration", "Full Source Code Ownership", "Essential SEO Optimization", "Rapid 72-Hour Turnaround"]
     },
     {
         title: "Full Stack MVP",
@@ -19,15 +19,17 @@ const PRICING_PLANS = [
         originalPrice: "₹6,500",
         unit: "/project",
         description: "A complete dynamic application connecting your UI to a real database.",
-        features: ["Frontend + Backend Integration", "Database Setup (MongoDB/SQL)", "User Authentication", "API Development", "1 Week Delivery"]
+        features: ["Integrated Frontend & Backend Architecture", "Robust Database Schema Design (SQL/NoSQL)", "Secure Identity & Access Management", "Scalable REST/GraphQL API Development", "Expedited 7-Day Launch Cycle"],
+
     },
     {
-        title: "Pro AI & Commerce",
+        title: "AI-Powered SaaS",
         price: "₹8,999",
         originalPrice: "₹12,000",
         unit: "/project",
         description: "Advanced business solution with payments and smart AI features.",
-        features: ["Full Stack + Database", "Payment Gateway (Razorpay)", "AI Integration (Gemini/OpenAI)", "Admin Dashboard", "2 Weeks Delivery"]
+        features: ["Enterprise-Grade Full Stack Solution", "Seamless Payment Gateway Integration", "Generative AI & LLM Capabilities", "Comprehensive Admin Analytics Dashboard", "Accelerated 14-Day Delivery"],
+
     },
     {
         title: "Enterprise Custom",
@@ -35,7 +37,7 @@ const PRICING_PLANS = [
         originalPrice: "",
         unit: "",
         description: "Tailored architecture for large-scale or complex requirements.",
-        features: ["Scalable Architecture Design", "Cloud Infrastructure (AWS)", "Advanced Security Audits", "Dedicated Support"],
+        features: ["High-Availability Architecture Design", "Enterprise Cloud Infrastructure (AWS/GCP)", "Rigorous Security & Compliance Audits", "Priority 24/7 Dedicated Support"],
         buttonText: "Book a Call to Discuss"
     }
 ];

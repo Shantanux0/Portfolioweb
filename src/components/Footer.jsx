@@ -166,10 +166,10 @@ const Footer = () => {
                     </div>
 
                     <div className="flex gap-6">
-                        <a href="https://github.com/Shantanux0" className="text-neutral-400 hover:text-black transition-colors" aria-label="GitHub">
+                        <a href="https://github.com/Shantanux0" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-black transition-colors" aria-label="GitHub">
                             <Github size={20} />
                         </a>
-                        <a href="https://www.linkedin.com/in/shantanu-kale-2s20/" className="text-neutral-400 hover:text-black transition-colors" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/shantanu-kale-2s20/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-black transition-colors" aria-label="LinkedIn">
                             <Linkedin size={20} />
                         </a>
                     </div>

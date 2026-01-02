@@ -32,7 +32,7 @@ const PROJECTS = [
         description: "Adaptive learning system integrating multiple AI models. specialized in high availability and fault-tolerant data pipelines.",
         tags: ["Java", "Spring Boot", "React", "OpenAI API", "MongoDB"],
         github: "https://github.com/Shantanux0",
-        demo: "https://shantanu-kale.vercel.app",
+        demo: "https://prepedge-ai.vercel.app/",
         featured: false
     }
 ];
@@ -386,8 +386,24 @@ const Home = () => {
                             </div>
 
                             <div className="flex items-center gap-6 pt-4 mt-auto">
-                                <a href={project.demo} className="text-xs font-bold uppercase tracking-widest hover:underline flex items-center gap-1">Live <span className="hidden sm:inline">Demo</span> <ExternalLink size={12} /></a>
-                                <a href={project.github} className="ml-auto text-neutral-400 hover:text-black transition-colors"><Github size={20} /></a>
+                                <a
+                                    href={project.demo}
+                                    onClick={(e) => {
+                                        if (project.title === 'PrepEdge AI Platform') {
+                                            alert("🔓 ACCESS GRANTED! \n\nRelax, this isn't a client project—it's 100% mine. No NDAs, no lawyers, just pure code.\n\nEnjoy the sneak peek! 👀");
+                                        } else if (project.demo === '#') {
+                                            e.preventDefault();
+                                            alert("🚫 WHOA THERE, 007! 🕵️‍♂️\n\nThis is a freelance project. That means a real client paid real money to keep this code private (NDAs are boring, but legally binding).\n\nIt's live, it's making them money, and no, you can't peek.\n\nWant me to build you something equally profitable? Let's talk numbers. 💸");
+                                            window.location.href = '#/pricing';
+                                        }
+                                    }}
+                                    className="text-xs font-bold uppercase tracking-widest hover:underline flex items-center gap-1"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Live <span className="hidden sm:inline">Demo</span> <ExternalLink size={12} />
+                                </a>
+                                <a href={project.github} target="_blank" rel="noopener noreferrer" className="ml-auto text-neutral-400 hover:text-black transition-colors"><Github size={20} /></a>
                             </div>
                         </motion.div>
                     ))}

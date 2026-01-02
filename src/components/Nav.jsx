@@ -39,8 +39,8 @@ const Nav = () => {
 
     const renderMobileLink = (item, index) => {
         const Tag = isHome ? 'a' : Link;
-        const to = isHome ? undefined : `/#${item.id}`;
-        const href = isHome ? `#${item.id}` : undefined;
+        const to = `/${item.id}`;
+        const href = `/#/${item.id}`;
 
         return (
             <motion.div key={item.name} variants={itemVariants}>
@@ -72,7 +72,7 @@ const Nav = () => {
                     {navItems.map(item => (
                         <a
                             key={item.name}
-                            href={isHome ? `#${item.id}` : `/#${item.id}`}
+                            href={`/#/${item.id}`}
                             className="font-bold uppercase tracking-[0.2em] hover:text-black transition-colors relative group py-2"
                         >
                             {item.name}
@@ -156,7 +156,7 @@ const Nav = () => {
                                         <div className="text-neutral-500 text-[10px] font-bold uppercase tracking-widest">Connect</div>
                                         <div className="flex gap-6">
                                             <a href="https://github.com/Shantanux0" className="text-white hover:text-neutral-400 transition-colors"><Github size={20} /></a>
-                                            <a href="https://www.linkedin.com/in/shantanu-kale2260/" className="text-white hover:text-neutral-400 transition-colors"><Linkedin size={20} /></a>
+                                            <a href="https://www.linkedin.com/in/shantanu-kale-2s20/" className="text-white hover:text-neutral-400 transition-colors"><Linkedin size={20} /></a>
                                             <a href="mailto:kaleshantanu2260@gmail.com" className="text-white hover:text-neutral-400 transition-colors"><Mail size={20} /></a>
                                         </div>
                                     </div>

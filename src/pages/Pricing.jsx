@@ -74,7 +74,7 @@ const Pricing = () => {
                                 ))}
                             </ul>
                             <a
-                                href={plan.price === 'Custom' ? "https://calendly.com/your-link" : "mailto:kaleshantanu2260@gmail.com?subject=Project Inquiry"}
+                                href={`mailto:kaleshantanu2260@gmail.com?subject=${encodeURIComponent(`Project Inquiry: ${plan.title}`)}&body=${encodeURIComponent(`I am interested in the ${plan.title} plan (${plan.price}).\n\nPlease contact me for further discussion.`)}`}
                                 className={`w-full py-3 border border-black text-center font-bold uppercase text-xs transition-colors ${plan.price === 'Custom' ? 'bg-black text-white hover:bg-neutral-800' : 'hover:bg-black hover:text-white'}`}
                             >
                                 {plan.buttonText || "Select Plan"}

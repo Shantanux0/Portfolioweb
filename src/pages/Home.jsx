@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 import {
     Code2, Layers, Rocket, Search, Briefcase, ExternalLink, Github, Globe, Quote, ShieldCheck, Server
 } from 'lucide-react';
@@ -147,6 +148,22 @@ const TESTIMONIALS = [
 ];
 
 const Home = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        // Handle scrolling for paths like /services, /work, /workflow, /contact
+        const sectionId = pathname.replace('/', '');
+        if (sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                // Short delay to ensure component is rendered
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+    }, [pathname]);
+
     return (
         <>
             {/* Hero Section */}
@@ -193,11 +210,11 @@ const Home = () => {
                             transition={{ duration: 0.6, delay: 0.6 }}
                             className="flex flex-wrap gap-4 md:gap-6 pt-6"
                         >
-                            <a href="#work" className="group relative px-6 md:px-8 py-3 md:py-4 bg-black text-white font-bold uppercase tracking-widest text-[10px] md:text-xs overflow-hidden text-center">
+                            <a href="/#/work" className="group relative px-6 md:px-8 py-3 md:py-4 bg-black text-white font-bold uppercase tracking-widest text-[10px] md:text-xs overflow-hidden text-center">
                                 <span className="relative z-10 group-hover:text-black transition-colors duration-300">View Deployment</span>
                                 <span className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
                             </a>
-                            <a href="#contact" className="group px-6 md:px-8 py-3 md:py-4 border border-black text-black font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-black hover:text-white transition-all duration-300 text-center">
+                            <a href="/#/contact" className="group px-6 md:px-8 py-3 md:py-4 border border-black text-black font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-black hover:text-white transition-all duration-300 text-center">
                                 Initiate Protocol
                             </a>
                         </motion.div>
@@ -231,9 +248,9 @@ const Home = () => {
                                 </div>
                                 <h3 className="text-xl md:text-2xl font-display font-bold mb-4 uppercase tracking-tight">{s.title}</h3>
                                 <p className="text-sm md:text-base text-neutral-500 font-light leading-relaxed mb-8">{s.description}</p>
-                                <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-neutral-400 group-hover:text-black transition-colors">
+                                <a href="/#/contact" className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-neutral-400 group-hover:text-black transition-colors cursor-pointer">
                                     <div className="h-px w-4 bg-current" /> Explore
-                                </div>
+                                </a>
                             </motion.div>
                         ))}
                     </div>
@@ -446,9 +463,7 @@ const Home = () => {
             </section>
 
             {/* Footer / Contact */}
-            <div id="contact">
-                <Footer />
-            </div>
+            <Footer />
         </>
     );
 };

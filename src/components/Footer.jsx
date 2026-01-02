@@ -137,13 +137,6 @@ const Footer = () => {
                                         ></textarea>
                                     </div>
 
-                                    <div className="flex gap-3 p-3 bg-yellow-50 border border-yellow-200 text-yellow-800 text-[10px] items-start">
-                                        <AlertCircle size={14} className="shrink-0 mt-0.5" />
-                                        <p className="leading-relaxed">
-                                            <strong>Notice:</strong> High demand. A ₹1,000 reservation fee applies for blocking development slots.
-                                        </p>
-                                    </div>
-
                                     <button type="submit" className="w-full py-3 md:py-4 bg-black text-white font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs hover:bg-neutral-800 transition-colors flex items-center justify-center gap-2 group">
                                         Transmit Inquiry <ArrowRight size={14} md:size={16} className="group-hover:translate-x-1 transition-transform" />
                                     </button>
@@ -169,14 +162,14 @@ const Footer = () => {
                     </div>
 
                     <div className="text-neutral-500 text-sm font-mono">
-                        © {new Date().getFullYear()} Shantanu Kale. All Rights Reserved.
+                        © 2025 Shantanu Kale. All Rights Reserved.
                     </div>
 
                     <div className="flex gap-6">
                         <a href="https://github.com/Shantanux0" className="text-neutral-400 hover:text-black transition-colors" aria-label="GitHub">
                             <Github size={20} />
                         </a>
-                        <a href="https://www.linkedin.com/in/shantanu-kale2260/" className="text-neutral-400 hover:text-black transition-colors" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/shantanu-kale-2s20/" className="text-neutral-400 hover:text-black transition-colors" aria-label="LinkedIn">
                             <Linkedin size={20} />
                         </a>
                     </div>

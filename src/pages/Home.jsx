@@ -46,7 +46,7 @@ const SKILL_GROUPS = [
     {
         title: "Backend Infrastructure",
         icon: <Server size={20} />,
-        skills: ["Node.js", "Java Spring", "Microservices", "PostgreSQL", "Redis"]
+        skills: ["Core Java", "Spring Boot", "Microservices", "PostgreSQL", "Redis"]
     },
     {
         title: "DevOps & Cloud",
@@ -325,7 +325,7 @@ const Home = () => {
             <section id="skills" className="py-24 md:py-40 bg-neutral-950 text-white px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="mb-16 md:mb-24">
-                        <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 tracking-tighter uppercase">Pro AI & Commerce</h2>
+                        <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 tracking-tighter uppercase">Core Registry</h2>
                         <div className="h-1 w-24 bg-white" />
                     </div>
 

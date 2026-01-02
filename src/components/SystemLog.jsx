@@ -49,12 +49,12 @@ const SystemLog = () => {
     }, []);
 
     return (
-        <div className="w-full max-w-4xl mx-auto mt-20 border border-neutral-200 bg-white font-mono text-[10px] text-neutral-500 shadow-sm">
-            <div className="flex border-b border-neutral-200 bg-neutral-50 px-4 py-2 justify-between items-center">
+        <div className="w-full max-w-4xl mx-auto mt-10 md:mt-20 border border-neutral-200 bg-white font-mono text-[10px] text-neutral-500 shadow-sm">
+            <div className="flex border-b border-neutral-200 bg-neutral-50 px-3 md:px-4 py-2 justify-between items-center">
                 <div className="flex gap-4">
                     <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                        <span className="font-bold tracking-widest uppercase">System Status: ONLINE</span>
+                        <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-green-500 animate-pulse" />
+                        <span className="font-bold tracking-widest uppercase text-[8px] md:text-[10px]">System Status: ONLINE</span>
                     </div>
                     <div className="hidden md:flex gap-4 text-neutral-400">
                         <span>CPU: {stats.cpu}%</span>
@@ -62,17 +62,17 @@ const SystemLog = () => {
                         <span>NET: {stats.net}ms</span>
                     </div>
                 </div>
-                <div className="text-neutral-400">V.2.0.4</div>
+                <div className="text-neutral-400 text-[8px] md:text-[10px]">V.2.0.4</div>
             </div>
 
-            <div className="p-4 h-40 overflow-hidden relative bg-neutral-50/50">
-                <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-white to-transparent pointer-events-none z-10" />
+            <div className="p-3 md:p-4 h-32 md:h-40 overflow-hidden relative bg-neutral-50/50">
+                <div className="absolute inset-x-0 bottom-0 h-10 md:h-12 bg-gradient-to-t from-white to-transparent pointer-events-none z-10" />
                 {logs.map((log, i) => (
                     <motion.div
                         key={i}
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="mb-1 font-medium truncate"
+                        className="mb-1 font-medium truncate text-[9px] md:text-[10px]"
                     >
                         <span className="text-neutral-300 mr-2">{'>'}</span>{log}
                     </motion.div>

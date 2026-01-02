@@ -43,26 +43,26 @@ const PRICING_PLANS = [
 
 const Pricing = () => {
     return (
-        <div className="pt-40 min-h-screen bg-white">
+        <div className="pt-24 md:pt-40 min-h-screen bg-white">
             <div className="max-w-7xl mx-auto px-6">
                 <SectionHeading title="Deployment Costs" subtitle="Transparent resource allocation. Choose a module or configure your own." centered />
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                     {PRICING_PLANS.map((plan, i) => (
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="p-8 border border-neutral-200 bg-white hover:border-black transition-colors flex flex-col"
+                            className="p-6 md:p-8 border border-neutral-200 bg-white hover:border-black transition-colors flex flex-col"
                         >
-                            <h3 className="text-lg font-bold uppercase tracking-widest mb-4">{plan.title}</h3>
+                            <h3 className="text-base md:text-lg font-bold uppercase tracking-widest mb-4">{plan.title}</h3>
                             <div className="mb-6 flex items-baseline gap-2">
                                 {plan.originalPrice && (
-                                    <span className="text-neutral-400 line-through text-sm decoration-red-500/50">{plan.originalPrice}</span>
+                                    <span className="text-neutral-400 line-through text-xs md:text-sm decoration-red-500/50">{plan.originalPrice}</span>
                                 )}
-                                <span className={`text-4xl font-display font-bold ${plan.price === 'Custom' ? 'text-black' : 'text-green-600'}`}>{plan.price}</span>
-                                {plan.unit && <span className="text-neutral-500 text-sm">{plan.unit}</span>}
+                                <span className={`text-3xl md:text-4xl font-display font-bold ${plan.price === 'Custom' ? 'text-black' : 'text-green-600'}`}>{plan.price}</span>
+                                {plan.unit && <span className="text-neutral-500 text-xs md:text-sm">{plan.unit}</span>}
                             </div>
                             <p className="text-neutral-500 font-light mb-8 text-sm min-h-[40px]">{plan.description}</p>
                             <ul className="space-y-4 mb-8 flex-grow">

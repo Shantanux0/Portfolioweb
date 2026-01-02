@@ -119,7 +119,7 @@ const Footer = () => {
                                             <option>Select Tier...</option>
                                             <option>Basic Frontend (₹1,999)</option>
                                             <option>Full Stack MVP (₹4,999)</option>
-                                            <option>Pro AI & Commerce (₹8,999)</option>
+                                            <option>AI-Powered SaaS (₹8,999)</option>
                                             <option>Enterprise Custom</option>
                                         </select>
                                     </div>

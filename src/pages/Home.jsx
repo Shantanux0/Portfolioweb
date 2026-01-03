@@ -82,8 +82,8 @@ const EXPERIENCE = [
     {
         company: "Freelance",
         role: "Full Stack Developer",
-        period: "2023 – PRESENT",
-        description: "Over 2 years of experience collaborating with diverse teams of developers from multiple countries. Delivering high-performance React frontends backed by scalable Spring/Node architectures."
+        period: "2024 – PRESENT",
+        description: "Over 1 year of experience collaborating with diverse teams of developers from multiple countries. Delivering high-performance React frontends backed by scalable Spring/Node architectures."
     },
     {
         company: "D. Y. Patil College of Engineering",
@@ -135,9 +135,15 @@ const TESTIMONIALS = [
     },
     {
         quote: "Hired Shantanu to build a React dashboard for my SaaS. He communicated well and delivered the project 2 days early. Clean code.",
-        author: "David Miller",
-        role: "Founder, NexusStream",
-        location: "San Francisco, USA"
+        author: "Vikram Malhotra",
+        role: "Technical Lead",
+        location: "Bangalore, India"
+    },
+    {
+        quote: "Shantanu's architectural insights were pivotal for our platform. He delivered a high-performance solution that scaled effortlessly.",
+        author: "Arjun Mehta",
+        role: "Engineering Manager",
+        location: "Chandigarh, India"
     },
     {
         quote: "Reliable freelancer. He optimized our database queries and set up the API structure for our agency's client. Good technical skills.",
@@ -439,7 +445,7 @@ const Home = () => {
             {/* Testimonials */}
             <section className="py-24 md:py-32 bg-neutral-50 border-y border-neutral-200 px-6">
                 <div className="max-w-6xl mx-auto">
-                    <SectionHeading title="Client Consensus" subtitle="Verified feedback from global partners." centered />
+                    <SectionHeading title="Client Consensus" subtitle="Verified feedback from industry partners." centered />
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                         {TESTIMONIALS.map((t, i) => (
                             <motion.div
@@ -448,7 +454,7 @@ const Home = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="p-6 md:p-8 border border-neutral-200 bg-white hover:border-black transition-colors relative"
+                                className={`p-6 md:p-8 border border-neutral-200 bg-white hover:border-black transition-colors relative ${i === 3 ? 'lg:col-start-2' : ''}`}
                             >
                                 <Quote size={20} className="mb-4 text-neutral-300" />
                                 <p className="text-sm md:text-base text-neutral-600 font-light leading-relaxed mb-6 italic">"{t.quote}"</p>

@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 const PRICING_PLANS = [
     {
         title: "Basic Frontend",
-        price: "₹1,999",
+        price: "₹1,399",
         originalPrice: "₹2,500",
         unit: "/project",
         description: "Perfect for personal portfolios, landing pages, and static websites.",
@@ -15,7 +15,7 @@ const PRICING_PLANS = [
     },
     {
         title: "Full Stack MVP",
-        price: "₹4,999",
+        price: "₹4,399",
         originalPrice: "₹6,500",
         unit: "/project",
         description: "A complete dynamic application connecting your UI to a real database.",
@@ -25,7 +25,7 @@ const PRICING_PLANS = [
     },
     {
         title: "AI-Powered SaaS",
-        price: "₹8,999",
+        price: "₹8,399",
         originalPrice: "₹12,000",
         unit: "/project",
         description: "Advanced business solution with payments and smart AI features.",
@@ -50,6 +50,16 @@ const Pricing = () => {
         <div className="pt-24 md:pt-40 min-h-screen bg-white">
             <div className="max-w-7xl mx-auto px-6">
                 <SectionHeading title="Deployment Costs" subtitle="Transparent resource allocation. Choose a module or configure your own." centered />
+
+                <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mb-12 p-4 bg-green-50 border border-green-200 flex items-center justify-center gap-3 text-sm md:text-base text-green-800 rounded-lg"
+                >
+                    <Info size={20} className="text-green-600" />
+                    <span className="font-bold uppercase tracking-wide">Early Bird Offer:</span>
+                    <span>Book now to lock in these discounted rates until 10 Jan 2026.</span>
+                </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                     {PRICING_PLANS.map((plan, i) => (

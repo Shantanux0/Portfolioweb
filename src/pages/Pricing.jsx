@@ -49,7 +49,7 @@ const Pricing = () => {
     return (
         <div className="pt-24 md:pt-40 min-h-screen bg-white">
             <div className="max-w-7xl mx-auto px-6">
-                <SectionHeading title="Deployment Costs" subtitle="Transparent resource allocation. Choose a module or configure your own." centered />
+                <SectionHeading title="Deployment Costs" subtitle="Select a standard module or design a custom solution." centered />
 
                 <motion.div
                     initial={{ opacity: 0, y: -10 }}

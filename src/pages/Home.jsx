@@ -476,7 +476,7 @@ const Home = () => {
                 <div className="text-center">
                     <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tighter mb-6 md:mb-8">Deployment Costs</h2>
                     <p className="text-lg md:text-xl text-neutral-500 font-light max-w-2xl mx-auto mb-10 md:mb-12">
-                        Transparent resource allocation. Choose a module or configure custom requirements.
+                        Select a standard module or design a custom solution.
                     </p>
                     <a href="#/pricing" className="inline-block px-8 md:px-12 py-4 md:py-5 bg-black text-white font-bold uppercase tracking-[0.2em] text-xs md:text-sm hover:scale-105 transition-transform shadow-2xl">
                         View Rate Card

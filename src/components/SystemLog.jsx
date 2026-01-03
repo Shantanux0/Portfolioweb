@@ -59,7 +59,12 @@ const SystemLog = () => {
             "ARRE YAR... merge conflict phir se 😤",
             "FULL SAPOT BHAI... backend se 🤝",
             "BINOD BINOD... console.log('BINOD') 😂",
-            "RASODE MEIN KAUN THA... debugging in progress 🔍"
+            "RASODE MEIN KAUN THA... debugging in progress 🔍",
+            "SYSTEM PE SYSTEM... baithara hai chhora jaat ka 🎶",
+            "AAYEIN?... error kahan se aaya? 🍆",
+            "GADDARI KORBE... code fat gaya 🗡️",
+            "MAZA AAYA... bug fix karke 😂",
+            "KHATAM TATA BYE BYE... deployment complete 👋"
         ];
 
         const logInterval = setInterval(() => {

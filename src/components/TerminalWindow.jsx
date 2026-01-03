@@ -64,12 +64,19 @@ const TerminalWindow = () => {
         }
     };
 
+    const inputRef = useRef(null);
+
+    const handleContainerClick = () => {
+        inputRef.current?.focus();
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="w-full max-w-xl bg-neutral-950 rounded-xl overflow-hidden shadow-2xl font-mono text-xs border border-neutral-800"
+            className="w-full max-w-xl bg-neutral-950 rounded-xl overflow-hidden shadow-2xl font-mono text-xs border border-neutral-800 relative z-20 cursor-text"
+            onClick={handleContainerClick}
         >
             <div className="bg-neutral-900 px-4 py-2 flex items-center gap-2 border-b border-neutral-800">
                 <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
@@ -91,6 +98,7 @@ const TerminalWindow = () => {
                 <div className="flex items-center text-neutral-300">
                     <span className="opacity-50 mr-2">$</span>
                     <input
+                        ref={inputRef}
                         className="bg-transparent border-none outline-none flex-1 text-neutral-300 placeholder-neutral-700"
                         autoFocus
                         value={input}

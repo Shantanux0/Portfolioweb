@@ -48,19 +48,19 @@ const Nav = () => {
                     to={to}
                     href={href}
                     onClick={() => setIsOpen(false)}
-                    className="group flex items-center justify-between py-6 border-b border-white/10"
+                    className="group flex items-center justify-between py-5 border-b border-white/10 w-full"
                 >
-                    <span className="text-3xl font-display font-bold uppercase tracking-tighter text-white group-hover:text-neutral-400 transition-colors">
+                    <span className="text-2xl font-display font-bold uppercase tracking-tighter text-white group-hover:text-neutral-400 transition-colors">
                         {item.name}
                     </span>
-                    <ArrowRight size={24} className="text-white opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
+                    <ArrowRight size={20} className="text-white opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
                 </Tag>
             </motion.div>
         );
     };
 
     return (
-        <nav className="fixed top-0 w-full z-[60] bg-white/80 backdrop-blur-xl border-b border-black/5">
+        <nav className="fixed top-0 w-full z-[10000] bg-white border-b border-black/5">
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 <Link to="/" onClick={() => setIsOpen(false)} className="font-mono font-bold text-black tracking-widest text-lg uppercase flex items-center gap-2 z-[70]">
                     <div className="w-3 h-3 bg-black rounded-full animate-pulse" />
@@ -88,7 +88,7 @@ const Nav = () => {
                 {/* Mobile Toggle */}
                 <button
                     onClick={toggleMenu}
-                    className="md:hidden p-2 z-[70] text-black hover:bg-neutral-100 transition-colors rounded-lg flex items-center gap-2"
+                    className={`md:hidden p-2 z-[100] transition-colors rounded-lg flex items-center gap-2 ${isOpen ? 'text-white hover:bg-white/10' : 'text-black hover:bg-neutral-100'}`}
                     aria-label="Toggle Menu"
                 >
                     <span className="text-[10px] font-bold uppercase tracking-widest hidden sm:block">
@@ -97,15 +97,15 @@ const Nav = () => {
                     <div className="relative w-6 h-6">
                         <motion.div
                             animate={isOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-                            className="absolute top-1 left-0 w-6 h-0.5 bg-black"
+                            className="absolute top-1 left-0 w-6 h-0.5 bg-current"
                         />
                         <motion.div
                             animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
-                            className="absolute top-3 left-0 w-6 h-0.5 bg-black"
+                            className="absolute top-3 left-0 w-6 h-0.5 bg-current"
                         />
                         <motion.div
                             animate={isOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-                            className="absolute top-5 left-0 w-6 h-0.5 bg-black"
+                            className="absolute top-5 left-0 w-6 h-0.5 bg-current"
                         />
                     </div>
                 </button>
@@ -127,41 +127,41 @@ const Nav = () => {
                             initial="closed"
                             animate="open"
                             exit="closed"
-                            className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-neutral-950 z-[90] md:hidden p-10 flex flex-col shadow-2xl"
+                            className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-black z-[90] md:hidden p-8 flex flex-col shadow-2xl border-l border-white/10"
                         >
-                            <div className="flex flex-col h-full">
-                                <div className="text-neutral-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-12 flex items-center gap-3">
+                            <div className="flex flex-col h-full overflow-y-auto">
+                                <div className="text-neutral-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-8 flex items-center gap-3 shrink-0">
                                     <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                                     Navigation Hub
                                 </div>
 
-                                <div className="space-y-2">
+                                <div className="space-y-1 shrink-0">
                                     {navItems.map((item, i) => renderMobileLink(item, i))}
                                     <motion.div variants={itemVariants}>
                                         <Link
                                             to="/pricing"
                                             onClick={() => setIsOpen(false)}
-                                            className="group flex items-center justify-between py-6 border-b border-white/10"
+                                            className="group flex items-center justify-between py-5 border-b border-white/10"
                                         >
-                                            <span className="text-3xl font-display font-bold uppercase tracking-tighter text-green-500 group-hover:text-green-400 transition-colors">
+                                            <span className="text-2xl font-display font-bold uppercase tracking-tighter text-green-500 group-hover:text-green-400 transition-colors">
                                                 Pricing
                                             </span>
-                                            <ArrowRight size={24} className="text-green-500 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
+                                            <ArrowRight size={20} className="text-green-500 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all" />
                                         </Link>
                                     </motion.div>
                                 </div>
 
-                                <div className="mt-auto space-y-10">
+                                <div className="mt-auto pt-10 space-y-8 shrink-0">
                                     <div className="space-y-4">
                                         <div className="text-neutral-500 text-[10px] font-bold uppercase tracking-widest">Connect</div>
                                         <div className="flex gap-6">
-                                            <a href="https://github.com/Shantanux0" className="text-white hover:text-neutral-400 transition-colors"><Github size={20} /></a>
-                                            <a href="https://www.linkedin.com/in/shantanu-kale-2s20/" className="text-white hover:text-neutral-400 transition-colors"><Linkedin size={20} /></a>
-                                            <a href="mailto:kaleshantanu2260@gmail.com" className="text-white hover:text-neutral-400 transition-colors"><Mail size={20} /></a>
+                                            <a href="https://github.com/Shantanux0" target="_blank" rel="noreferrer" className="text-white hover:text-neutral-400 transition-colors"><Github size={24} /></a>
+                                            <a href="https://www.linkedin.com/in/shantanu-kale-2s20/" target="_blank" rel="noreferrer" className="text-white hover:text-neutral-400 transition-colors"><Linkedin size={24} /></a>
+                                            <a href="mailto:kaleshantanu2260@gmail.com" className="text-white hover:text-neutral-400 transition-colors"><Mail size={24} /></a>
                                         </div>
                                     </div>
 
-                                    <div className="p-6 bg-white/5 border border-white/10 rounded-xl">
+                                    <div className="p-5 bg-white/5 border border-white/10 rounded-xl">
                                         <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-2">System Status</div>
                                         <div className="flex items-center justify-between">
                                             <span className="text-white text-xs font-mono">OPERATIONAL</span>

@@ -135,9 +135,9 @@ const TESTIMONIALS = [
     },
     {
         quote: "Hired Shantanu to build a React dashboard for my SaaS. He communicated well and delivered the project 2 days early. Clean code.",
-        author: "Mark Thompson",
-        role: "Founder, TechFlow",
-        location: "Seattle, USA"
+        author: "David Miller",
+        role: "Founder, NexusStream",
+        location: "San Francisco, USA"
     },
     {
         quote: "Reliable freelancer. He optimized our database queries and set up the API structure for our agency's client. Good technical skills.",
@@ -221,7 +221,7 @@ const Home = () => {
                     </div>
 
                     <div className="relative pb-12 lg:pb-0">
-                        <div className="absolute -inset-4 bg-gradient-to-tr from-neutral-200 to-transparent rounded-full blur-3xl opacity-30" />
+                        <div className="absolute -inset-4 bg-gradient-to-tr from-neutral-200 to-transparent rounded-full blur-3xl opacity-30 pointer-events-none" />
                         <TerminalWindow />
                     </div>
                 </div>

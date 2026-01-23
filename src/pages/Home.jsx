@@ -150,6 +150,18 @@ const TESTIMONIALS = [
         author: "Sanket Patil",
         role: "Tech Consultant",
         location: "Pune, India"
+    },
+    {
+        quote: "Exceptional work on our e-commerce platform. The performance improvements exceeded our expectations.",
+        author: "Priya Sharma",
+        role: "Product Manager",
+        location: "Mumbai, India"
+    },
+    {
+        quote: "You have done a great job! ❤️",
+        author: "Tushar Agarwal",
+        role: "Co-Founder/CEO, Vastrado",
+        location: "India"
     }
 ];
 
@@ -454,7 +466,7 @@ const Home = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className={`p-6 md:p-8 border border-neutral-200 bg-white hover:border-black transition-colors relative ${i === 3 ? 'lg:col-start-2' : ''}`}
+                                className={`p-6 md:p-8 border border-neutral-200 bg-white hover:border-black transition-colors relative`}
                             >
                                 <Quote size={20} className="mb-4 text-neutral-300" />
                                 <p className="text-sm md:text-base text-neutral-600 font-light leading-relaxed mb-6 italic">"{t.quote}"</p>

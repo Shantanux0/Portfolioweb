@@ -7,16 +7,16 @@ import Footer from '../components/Footer';
 const PRICING_PLANS = [
     {
         title: "Basic Frontend",
-        price: "₹1,399",
-        originalPrice: "₹2,500",
+        price: "₹2,498",
+        originalPrice: "₹3,500",
         unit: "/project",
         description: "Perfect for personal portfolios, landing pages, and static websites.",
         features: ["Modern Responsive Interface", "Cloud Deployment Configuration", "Full Source Code Ownership", "Essential SEO Optimization", "Rapid 72-Hour Turnaround"]
     },
     {
         title: "Full Stack MVP",
-        price: "₹4,399",
-        originalPrice: "₹6,500",
+        price: "₹6,498",
+        originalPrice: "₹8,500",
         unit: "/project",
         description: "A complete dynamic application connecting your UI to a real database.",
         features: ["React Frontend + Spring Boot Backend", "Robust SQL Database Design (MySQL/PostgreSQL)", "Secure Java Security Integration", "Scalable REST APIs with Spring Boot", "Expedited 7-Day Launch Cycle"],
@@ -25,8 +25,8 @@ const PRICING_PLANS = [
     },
     {
         title: "AI-Powered SaaS",
-        price: "₹8,399",
-        originalPrice: "₹12,000",
+        price: "₹11,998",
+        originalPrice: "₹14,000",
         unit: "/project",
         description: "Advanced business solution with payments and smart AI features.",
         features: ["Enterprise Spring Boot Microservices", "Seamless Payment Gateway Integration", "Generative AI Integration (Java SDKs)", "Comprehensive Admin Analytics Dashboard", "Accelerated 14-Day Delivery"],
@@ -51,15 +51,7 @@ const Pricing = () => {
             <div className="max-w-7xl mx-auto px-6">
                 <SectionHeading title="Deployment Costs" subtitle="Select a standard module or design a custom solution." centered />
 
-                <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="mb-12 p-4 bg-green-50 border border-green-200 flex items-center justify-center gap-3 text-sm md:text-base text-green-800 rounded-lg"
-                >
-                    <Info size={20} className="text-green-600" />
-                    <span className="font-bold uppercase tracking-wide">Early Bird Offer:</span>
-                    <span>Book now to lock in these discounted rates until 10 Jan 2026.</span>
-                </motion.div>
+                {/* Offer banner removed */}
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                     {PRICING_PLANS.map((plan, i) => (
